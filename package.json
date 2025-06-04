@@ -2,9 +2,10 @@
   "name": "node-express-web",
   "version": "1.0.0",
   "description": "",
+  "type": "module",
   "main": "index.js",
   "scripts": {
-    "dev": "nodemon index.js",
+    "dev": "nodemon src/index.js",
     "start": "node index.js"
   },
   "author": "",
@@ -14,6 +15,6 @@
     "express": "^4.21.1"
   },
   "devDependencies": {
-    "nodemon": "^3.0.1"
+    "nodemon": "^3.1.10"
   }
 }

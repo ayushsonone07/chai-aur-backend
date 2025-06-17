@@ -6,4 +6,10 @@ const registerUser = asyncHandeler(async (req, res) => {
     })
 })
 
-export { registerUser }
+const loginUser = asyncHandeler(async (req, res) => {
+    res.status(200).json({
+        message: "register user"
+    })
+})
+
+export { registerUser, loginUser }

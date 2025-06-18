@@ -46,6 +46,9 @@ const userSchema = new Schema(
             trim: true,
             index: true,
         },
+        refreshToken: {
+            type: String
+        }
     }, { timestamps: true}
 );
 

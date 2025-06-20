@@ -31,7 +31,9 @@ const registerUser = asyncHandeler(async (req, res) => {
     
     // upload to cloudinary, avatar
     const avatar = await uploadOnCloudinary(avatarLocalpath);
+    console.log(avatar);
     const coverimage = await uploadOnCloudinary(coverimageLocalpath);
+    console.log(coverimage)
 
     if(!avatar){
         throw new ApiError(400, "Avatar file is required!")
@@ -51,8 +53,7 @@ const registerUser = asyncHandeler(async (req, res) => {
     const createdUser = await User.findById(user._id).select(
         "-password -refreshToken" //minus - these fields select method
     )
-
-    if(!createdUser){
+        if(!createdUser){
         throw new ApiError(500, "Something went wrong while registering user!")
     }
 
